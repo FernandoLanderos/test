@@ -1,0 +1,85 @@
+<h1>Reportes</h1>
+<p></p>
+
+<h2>Orden por precio</h2>
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Tamaño</th>
+		<th>Tipo</th>
+		<th>Precio</th>
+		<th>Peso</th>
+		<th>Porciones</th>
+	</tr>
+
+	<% @OrdenPrecio.each do |galletum| %>
+	<tr>
+		<td><%= galletum.nombre %></td>
+		<td><%= galletum.tamaño %></td>
+		<td><%= galletum.tipo %></td>
+		<td><%= galletum.precio %></td>
+		<td><%= galletum.peso %></td>
+		<td><%= galletum.porciones %></td>
+	</tr>
+	<% end %>
+</table>
+
+<% precioMenor = @OrdenPrecio.first %>
+El precio mas bajo es: <%= precioMenor.precio %>
+<br/>
+<% precioMayor = @OrdenPrecio.last %>
+El precio mas alto es: <%= precioMayor.precio %>
+
+<h2>Orden por peso</h2>
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Tamaño</th>
+		<th>Tipo</th>
+		<th>Precio</th>
+		<th>Peso</th>
+		<th>Porciones</th>
+	</tr>
+
+	<% @OrdenPeso.each do |galletum| %>
+	<tr>
+		<td><%= galletum.nombre %></td>
+		<td><%= galletum.tamaño %></td>
+		<td><%= galletum.tipo %></td>
+		<td><%= galletum.precio %></td>
+		<td><%= galletum.peso %></td>
+		<td><%= galletum.porciones %></td>
+	</tr>
+	<% end %>
+</table>
+
+<% pesoMenor = @OrdenPeso.first %>
+El peso mas bajo es: <%= pesoMenor.peso %>
+
+<h2>Orden por porciones</h2>
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Tamaño</th>
+		<th>Tipo</th>
+		<th>Precio</th>
+		<th>Peso</th>
+		<th>Porciones</th>
+	</tr>
+
+	<% @OrdenPorciones.each do |galletum| %>
+	<tr>
+		<td><%= galletum.nombre %></td>
+		<td><%= galletum.tamaño %></td>
+		<td><%= galletum.tipo %></td>
+		<td><%= galletum.precio %></td>
+		<td><%= galletum.peso %></td>
+		<td><%= galletum.porciones %></td>
+	</tr>
+	<% end %>
+</table>
+
+<% porcionMenor = @OrdenPorciones.first %>
+La porción menor es: <%= porcionMenor.porciones %>
+
+<br/><%= link_to 'Inicio', galleta_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @galletum.nombre %>
+</p>
+
+<p>
+  <strong>Tamaño:</strong>
+  <%= @galletum.tamaño %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @galletum.tipo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @galletum.precio %>
+</p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @galletum.peso %>
+</p>
+
+<p>
+  <strong>Porciones:</strong>
+  <%= @galletum.porciones %>
+</p>
+
+<%= link_to 'Edit', edit_galletum_path(@galletum) %> |
+<%= link_to 'Back', galleta_path %>
